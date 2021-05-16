@@ -24,7 +24,7 @@ const App = () => {
           <Aboutus/>
           <Feedback/>
      </Router>
-</>
+
   );
 };
 
