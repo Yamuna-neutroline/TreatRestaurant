@@ -1,7 +1,8 @@
-import React, { Component } from "react";
+import React from "react";
 import styled from "styled-components";
 import { Container } from "@material-ui/core";
 import HomeBackground from "../assets/images/wall.jpg";
+
 
 
 
