@@ -5,10 +5,14 @@ import { Navbar} from './components';
 import Homepage from './components/Homepage';
 import Aboutus from './components/Aboutus';
 
-
+import ContactUs from "./components/ContactUs/ContactUs";
+ import Footer from "./components/Footer/Footer";
+import Reservation from './components/Reservation/Reservation';
+ 
 
 function App() {
   return (
+    <>
     <Router>
       <GlobalStyle />
       
@@ -22,8 +26,13 @@ function App() {
               <Route path='/reservation' component={Reservation} /> */}
           </Switch>
       
-     
+         
     </Router>
+    <Reservation/>
+    {/* <ContactUs/> */}
+   
+      <Footer/>
+    </>
   );
 }
 
