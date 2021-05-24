@@ -20,16 +20,15 @@ function App() {
       <Switch>
               <Route exact path='/' component={Homepage} />
               <Route path='/aboutus' component={Aboutus} />
-              {/* 
-              <Route path='/menu' component={Menu} />
-              <Route path='/contact' component={Contact} />
-              <Route path='/reservation' component={Reservation} /> */}
+              
+              {/* <Route path='/menu' component={Menu} /> */}
+              <Route path='/contact' component={ContactUs} />
+              <Route path='/reservation' component={Reservation} /> 
           </Switch>
       
          
     </Router>
-    <Reservation/>
-    {/* <ContactUs/> */}
+    
    
       <Footer/>
     </>

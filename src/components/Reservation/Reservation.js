@@ -1,41 +1,83 @@
-import React from 'react'
-import {ReservationContainer,
-LeftReservation,
-RightReservation,
-LeftContainer,
-BorderLine,
-FormContainer,
-}from './ReservationElements';
-const Reservation = () => {
-    return (
-        <>
-           <ReservationContainer>
-               <LeftReservation>
-                   <LeftContainer>
-<h2>Time Open</h2>
-<h3 >Sun-Fri</h3><p>6:00 am-5:00pm</p>
-          <h3>Sat</h3><p>10:00 am-3:00pm</p>
-         <BorderLine/>
-         <h4>Call us : +977 98457125687 </h4>
-</LeftContainer>
-               </LeftReservation>
-               <RightReservation>
-           <h1>Reservation</h1>
-           <FormContainer>
-      <form method="post" >      
-<input type="text" name="name" required="true" placeholder="Enter your name"/><br/>
-<input type="email" name="email" required="true"  placeholder="Enter your email"/><br/>
-<input type="date" name="date" required="true"  placeholder="Enter your date"/><br/>
-<input type="time" name="time" required="true"  placeholder="Enter your time"/><br/>
-<input type="time" name="duration" required="true"  placeholder="Enter your duration"/><br/>
-<input type="number" name="people"  placeholder="No of people"/><br/>
-<input type="submit" value="Book Your Table"/>
-</form>   
-           </FormContainer>
-               </RightReservation>
-               </ReservationContainer> 
-        </>
-    )
-}
+import React from "react";
+import { makeStyles } from '@material-ui/core/styles';
+import {TextField,Button} from '@material-ui/core';
+import {
+  ReservationContainer,
+  LeftReservation,
+  RightReservation,
+  LeftContainer,
+  BorderLine,
+  
+} from "./ReservationElements";
+const useStyles = makeStyles((theme) => ({
+    container: 
+    {
+display:'flex',
+flexDirection:'column',
 
-export default Reservation
+'&>*':{
+margin:theme.spacing(1),
+width:'35vw',
+[theme.breakpoints.down("sm")]: {
+    width: "38vw",
+  },
+  
+},
+
+    },
+   
+    btn: {
+        width:'15vw',
+        
+    }
+  }));
+const Reservation = () => {
+    const classes = useStyles();
+  return (
+    <>
+      <ReservationContainer>
+        <LeftReservation>
+          <LeftContainer>
+            <h2>Time Open</h2>
+            <h3>Sun-Fri</h3>
+            <p>6:00 am-5:00pm</p>
+            <h3>Sat</h3>
+            <p>10:00 am-3:00pm</p>
+            <BorderLine />
+            <h4>Call us : +977 98457125687 </h4>
+          </LeftContainer>
+        </LeftReservation>
+        <RightReservation>
+          <h1>Reservation</h1>
+          
+          <form className={classes.container}  noValidate autoComplete="off">
+     <TextField id="standard-basic" label="Enter your name" />
+     <TextField id="standard-basic" label="Enter your email" />
+     <TextField
+   id="standard-basic"
+   label="Date"
+  
+    type="date"
+  />
+  <TextField
+    id="time"
+    label="Time"
+    type="time"
+   
+    />
+    <TextField id="standard-basic"  label="No of people" type="number" />
+    <Button variant="contained" color="primary" className={classes.btn}>
+  Book Table
+</Button>
+</form>
+
+
+
+          
+        </RightReservation>
+      </ReservationContainer>
+    </>
+  );
+};
+
+export default Reservation;
