@@ -13,7 +13,7 @@ export const infoObjOne = {
       'While it is important to have naturally occurring sugars in your diet, many foods contain harmful added sugars that contain no nutritional value.According to a study conducted by the University of Florida, the brain releases heroin-like chemicals called endogenous opioids when an individual indulges on sweet, salty or fatty foods.',
     buttonLabel: 'Read More',
     imgStart: '',
-    //img: url(${ foodpic1}),
+   // img: url(${foodpic1 }),
     alt: 'food1',
     start: ''
   };

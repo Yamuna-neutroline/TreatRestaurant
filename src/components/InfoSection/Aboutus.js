@@ -5,8 +5,9 @@ import InfoSection from './InfoSection';
 const Aboutus = () => {
   return (
     <>
-   <InfoSection {...infoObjTwo} />
     <InfoSection {...infoObjOne} />
+   <InfoSection {...infoObjTwo} />
+    
     </>
   );
 };

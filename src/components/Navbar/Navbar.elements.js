@@ -3,15 +3,17 @@ import { Link } from 'react-router-dom';
 import { Container } from '../../globalStyles';
 
 export const Nav = styled.nav`
-  background: #101522;
+  ${'' /* background: ${props => (props.true ? 'black' : 'transparent')}; */}
+  ${'' /* background: black; */}
   height: 80px;
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 1.2rem;
-  position: sticky;
+  position: fixed;
   top: 0;
   z-index: 999;
+  width: 100%;
 `;
 
 export const NavbarContainer = styled(Container)`

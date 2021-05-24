@@ -17,6 +17,7 @@ import navlogo from "../../assets/logos/logo.png";
 function Navbar() {
   const [click, setClick] = useState(false);
   const [button, setButton] = useState(true);
+  const [navbar,setNavbar] = useState(false);
 
   const handleClick = () => setClick(!click);
   const closeMobileMenu = () => setClick(false);
@@ -30,15 +31,33 @@ function Navbar() {
   };
 
   useEffect(() => {
-    showButton();
+    showButton()
   }, []);
 
   window.addEventListener('resize', showButton);
 
+  const changeNavBackground = () => {
+    if(window.scrollY >=150){
+      setNavbar(true);
+    }
+    else{
+      setNavbar(false);
+    }
+  }
+
+  window.addEventListener("scroll", changeNavBackground);
+
   return (
     <>
+    
       <IconContext.Provider value={{ color: '#fff' }}>
-        <Nav>
+         <Nav
+         style={
+           navbar
+             ? { background: "black"}
+             : { background: "transparent"}
+         }  
+        >
           <NavbarContainer>
             <NavLogo to='/' onClick={closeMobileMenu}>
                <NavIcon src = {navlogo}/> 
