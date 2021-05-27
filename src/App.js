@@ -5,8 +5,10 @@ import { Navbar } from "./components";
 import Aboutus from "./components/InfoSection/Aboutus";
 import LandingPage from "./containers/LandingPage";
 import Menu from "./components/Menu/Menu";
-import Reservation from "./components/Reservation/Reservation";
-import Contact from "./components/ContactUs/ContactUs";
+import ContactUs from "./components/ContactUs/ContactUs"
+import Reservation from "./components/Reservation/Reservation"
+import Footer from "./components/Footer/Footer"
+
 const App = () => {
   return (
 
@@ -19,10 +21,12 @@ const App = () => {
           <Route exact path="/" component={LandingPage} />
           <Route path="/aboutus" component={Aboutus} />
           <Route path="/menu" component={Menu} />
-           <Route path='/contact' component={Contact} />
-              <Route path='/reservation' component={Reservation} /> 
+          <Route path='/contact' component={ContactUs} />
+              <Route path='/reservation' component={Reservation} />
         </Switch>
+        {/* <Footer/> */}
       </Router>
+
     </div>
   );
 };
