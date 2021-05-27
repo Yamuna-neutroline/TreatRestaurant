@@ -18,8 +18,15 @@ flexDirection:'column',
 '&>*':{
 margin:theme.spacing(1),
 width:'35vw',
-[theme.breakpoints.down("sm")]: {
-    width: "38vw",
+[theme.breakpoints.down("lg")]: {
+    width: "40vw",
+  },
+  [theme.breakpoints.down("sm")]: {
+    width: "50vw",
+  },
+  
+  [theme.breakpoints.down("xs")]: {
+    width: "60vw",
   },
   
 },
@@ -28,7 +35,15 @@ width:'35vw',
    
     btn: {
         width:'15vw',
-        
+        padding:'1rem',
+       
+        [theme.breakpoints.down("sm")]: {
+          width: "30vw",
+        }, 
+        [theme.breakpoints.down("xs")]: {
+          width: "40vw",
+          padding:'0.5rem',
+        }, 
     }
   }));
 const Reservation = () => {
@@ -56,24 +71,18 @@ const Reservation = () => {
      <TextField
    id="standard-basic"
    label="Date"
-  
     type="date"
   />
   <TextField
     id="time"
     label="Time"
     type="time"
-   
     />
     <TextField id="standard-basic"  label="No of people" type="number" />
     <Button variant="contained" color="primary" className={classes.btn}>
   Book Table
 </Button>
-</form>
-
-
-
-          
+</form>          
         </RightReservation>
       </ReservationContainer>
     </>

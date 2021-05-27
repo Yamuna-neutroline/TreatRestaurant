@@ -7,6 +7,7 @@ export const ReservationContainer = styled.div`
   text-align: center;
   z-index: 1;
   position: relative;
+ 
   margin: 4rem;
   height:70vh;
   @media screen and (max-width: 1085px) {
@@ -29,9 +30,10 @@ export const LeftReservation = styled.div`
   color: #fff;
   margin: 1rem;
   padding: 1rem;
+ 
   @media screen and (max-width: 1085px) {
    height:95vh;
-   width:50vw;
+   width:60vw;
   }
   @media screen and (max-width: 915px) {
     
@@ -44,6 +46,7 @@ export const LeftReservation = styled.div`
     width:90vw;
     height:130vh;
    }
+   
 `;
 export const LeftContainer = styled.div`
   padding: 1rem;
@@ -67,12 +70,18 @@ export const LeftContainer = styled.div`
   }
   h4 {
     font-size: 1rem;
-    padding: 0.5rem;
-    margin: 1.2rem;
+    
   }
   @media screen and (max-width: 1085px) {
    height:80vh;
    
+
+  }
+  @media screen and (max-width: 960px) {
+   height:86vh;
+   h4 {
+   margin-top:-1.5rem;
+  }
 
   }
  

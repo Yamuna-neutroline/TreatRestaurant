@@ -25,7 +25,7 @@ export const ContactForm = styled.div`
   
   align-items: center;
   text-align: center;
-  margin: 2rem;
+  margin: 5rem;
   text-transform: uppercase;
  
 `;
@@ -35,6 +35,10 @@ width:90vw;
 @media screen and (max-width:1085px)
 {
   width:90vw;
+}
+@media screen and (max-width:520px)
+{
+  width:80vw;
 }
 `;
 export const LeftContact= styled.div`
@@ -49,6 +53,7 @@ padding:1rem;
 line-height:5vh;
 color:blue;
 font-size:1.5rem;
+
 transform:translate(-25%,0%);
 @media screen and (max-width:1085px)
 {
@@ -57,23 +62,18 @@ transform:translate(-25%,0%);
 }
 
 `;
-export const BackContactImg=styled.img`
-width:35%;
-height:60vh;
 
-@media screen and (max-width:1085px)
-{
-  width:45%;
-}
 
-`;
 export const ContactFormContainer = styled.div`
  position:absolute;
  top:30%;
- left:45%;
- transform:translate(35% 0%);
-color:blue;
+ left:30%;
 
+margin:0.5rem;
+@media screen and (max-width:600px)
+{
+  left:18%;
+}
 
 h2 
 {

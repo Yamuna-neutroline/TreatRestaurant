@@ -6,8 +6,7 @@ import {
   ContactForm,
   ContactFormContainer,
   VectorContactImage,
-  LeftContact,
-  BackContactImg
+  
 } from "./ContactElement";
 import Logo from "../../assets/images/contactus.jpg";
 import Vector from "../../assets/images/contact.jpg";
@@ -25,19 +24,21 @@ const useStyles = makeStyles((theme) => ({
     display: "flex",
     flexDirection: "column",
     width: "40vw",
-   
+  
     "& > *": {
       margin: theme.spacing(1.5),
+     
     },
     [theme.breakpoints.down("sm")]: {
       width: "30vw",
+      width: "40vw",
     },
     [theme.breakpoints.down("lg")]: {
-      width: "40vw",
+      width: "45vw",
       height:"75vh",
     },
     [theme.breakpoints.down("xs")]: {
-      width: "80vw",
+      width: "65vw",
     },
   },
   sendbtn: {
@@ -52,7 +53,7 @@ const useStyles = makeStyles((theme) => ({
     },
 
     [theme.breakpoints.down("xs")]: {
-      width: "60vw",
+      width: "35vw",
     },
   },
 }));
@@ -67,10 +68,7 @@ const ContactUs = () => {
         <ContactForm>
           <VectorContactImage src={Vector}/>
           
-          <LeftContact> 
-
-          <BackContactImg src={logo}/>
-          </LeftContact>
+         
          
           <ContactFormContainer>
            
